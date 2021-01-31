@@ -1,4 +1,4 @@
-# msci
+# Msci Project
 
 This is the code for the HPC. 
 
