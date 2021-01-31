@@ -15,7 +15,6 @@ Original file is located at
 import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
-import copy 
 import os
 import time 
 
