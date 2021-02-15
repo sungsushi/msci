@@ -31,22 +31,24 @@ def gen_graph_adj_2(N, seed=False):
 
     
     
-    unrotpoints = np.array([x,y])
-    unrotpoints = unrotpoints[:,get_intercept(unrotpoints).argsort()].T # sort by ascending in causal order
-
+    points = np.array([x,y])
+    del x
+    del y
     
-    unrotpoints = np.insert(unrotpoints, [0], 0, axis=0) # add the (0,0) node to keep everything causal
-    unrotpoints = np.insert(unrotpoints, [len(unrotpoints)], [1, 1], axis=0) # add the sink node
+    points = points[:,get_intercept(points).argsort()].T # sort by ascending in causal order
+    
+    points = np.insert(points, [0], 0, axis=0) # add the (0,0) node to keep everything causal
+    points = np.insert(points, [len(points)], [1, 1], axis=0) # add the sink node
     
     adj = []
     for i in range(N): # need all adjacencies for algorithm but do we really?
-        x_cond = (unrotpoints[i][0] - unrotpoints[i+1:][:,0]) < 0
-        y_cond = (unrotpoints[i][1] - unrotpoints[i+1:][:,1]) < 0
+        x_cond = (points[i][0] - points[i+1:][:,0]) < 0
+        y_cond = (points[i][1] - points[i+1:][:,1]) < 0
         indices = np.where((x_cond * y_cond)==True)[0]
         adj.append(list(indices+i+1))
 
-    points = np.array([unrotpoints[:,0]*np.cos(np.pi/4) - unrotpoints[:,1]*np.sin(np.pi/4), 
-                     unrotpoints[:,1]*np.sin(np.pi/4) + unrotpoints[:,0]*np.cos(np.pi/4)]).T
+    points = np.array([points[:,0]*np.cos(np.pi/4) - points[:,1]*np.sin(np.pi/4), \
+                      points[:,1]*np.sin(np.pi/4) + points[:,0]*np.cos(np.pi/4)]).T
     return points, adj
 
 def edge_from_adj(adj):
