@@ -32,8 +32,7 @@ def gen_graph_adj_2(N, seed=False):
     
     
     points = np.array([x,y])
-    del x
-    del y
+    del x,y
     
     points = points[:,get_intercept(points).argsort()].T # sort by ascending in causal order
     
