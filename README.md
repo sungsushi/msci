@@ -8,3 +8,4 @@ Leaner_model folder contains a streamlined version of the code in 1+1D. It doesn
 
 3d folder contains the preliminary version of the 1 time + 2 spatial dimention model. It contains the longest, random, time greedy and proper time greedy paths from the ordered array of node coordinates. 
 
+Measures folder contains the various 1+1D path measures used in the project: angles, area, protrusion and 
