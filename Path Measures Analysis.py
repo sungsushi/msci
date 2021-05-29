@@ -13,9 +13,8 @@ import matplotlib.pyplot as plt
 import math
 from scipy.optimize import curve_fit
 from copy import deepcopy
-from google.colab import files
-from google.colab import drive
-drive.mount('/content/drive')
+
+"""general import/export location in drive"""
 
 #module loading without accessing colab again cause authorisation code every time is annoying
 
@@ -141,26 +140,15 @@ def straightline(x,m,c):
   return m*x + c
 
 """#**Loading Paths**
-run the version relevant to you
 
-Saeed Version
+SmallGraphs = np.load(file=<pathway to file>.npy, allow_pickle=True)
+BigGraphs = np.load(file=<pathway to file>.npy, allow_pickle=True)
+BBigGraphs_1 = np.load(file=<pathway to file>.npy, allow_pickle=True)
+BBigGraphs_2 = np.load(file=<pathway to file>.npy, allow_pickle=True)
+BBBigGraphs_1 =  np.load(file=<pathway to file>.npy, allow_pickle=True)
+BBBigGraphs_2 =  np.load(file=<pathway to file>.npy, allow_pickle=True)
+
 """
-
-SmallGraphs = np.load(file='/content/drive/My Drive/Code for MSci/realisations/1000_paths.npy', allow_pickle=True)
-BigGraphs = np.load(file='/content/drive/My Drive/Code for MSci/realisations/100_paths_BigGraphs.npy', allow_pickle=True)
-BBigGraphs_1 = np.load(file='/content/drive/My Drive/Code for MSci/realisations/50_paths_BBigGraph_part1.npy', allow_pickle=True)
-BBigGraphs_2 = np.load(file='/content/drive/My Drive/Code for MSci/realisations/50_paths_BBigGraph_part2.npy', allow_pickle=True)
-BBBigGraphs_1 =  np.load(file='/content/drive/My Drive/Code for MSci/realisations/25_paths_1e5_part1.npy', allow_pickle=True)
-BBBigGraphs_2 =  np.load(file='/content/drive/My Drive/Code for MSci/realisations/25_paths_1e5_part2.npy', allow_pickle=True)
-
-"""Sung Soo Version"""
-
-SmallGraphs = np.load(file='/content/drive/My Drive/Colab Notebooks/msci/realisations/1000_paths.npy', allow_pickle=True)
-BigGraphs = np.load(file='/content/drive/My Drive/Colab Notebooks/msci/realisations/100_paths_BigGraphs.npy', allow_pickle=True)
-BBigGraphs_1 = np.load(file='/content/drive/My Drive/Colab Notebooks/msci/realisations/50_paths_BBigGraph_part1.npy', allow_pickle=True)
-BBigGraphs_2 = np.load(file='/content/drive/My Drive/Colab Notebooks/msci/realisations/50_paths_BBigGraph_part2.npy', allow_pickle=True)
-BBBigGraphs_1 =  np.load(file='/content/drive/My Drive/Colab Notebooks/msci/realisations/25_paths_1e5_part1.npy', allow_pickle=True)
-BBBigGraphs_2 =  np.load(file='/content/drive/My Drive/Colab Notebooks/msci/realisations/25_paths_1e5_part2.npy', allow_pickle=True)
 
 """#**Seperating out paths**
 
