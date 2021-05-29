@@ -12,30 +12,16 @@ Original file is located at
 
 import numpy as np
 import matplotlib.pyplot as plt
-from google.colab import files
-
-from google.colab import drive
-drive.mount('/content/drive')
-
-!ls
+"""import location code"""
 
 """# load"""
 
-#Sung Soo
-SmallGraphs = np.load(file='/content/drive/My Drive/Colab Notebooks/msci/realisations/1000_paths.npy', allow_pickle=True)
-BigGraphs = np.load(file='/content/drive/My Drive/Colab Notebooks/msci/realisations/100_paths_BigGraphs.npy', allow_pickle=True)
-BBigGraphs_1 = np.load(file='/content/drive/My Drive/Colab Notebooks/msci/realisations/50_paths_BBigGraph_part1.npy', allow_pickle=True)
-BBigGraphs_2 = np.load(file='/content/drive/My Drive/Colab Notebooks/msci/realisations/50_paths_BBigGraph_part2.npy', allow_pickle=True)
-BBBigGraphs_1 =  np.load(file='/content/drive/My Drive/Colab Notebooks/msci/realisations/25_paths_1e5_part1.npy', allow_pickle=True)
-BBBigGraphs_2 =  np.load(file='/content/drive/My Drive/Colab Notebooks/msci/realisations/25_paths_1e5_part2.npy', allow_pickle=True)
-
-#Saeed
-SmallGraphs = np.load(file='/content/drive/My Drive/Code for MSci/realisations/1000_paths.npy', allow_pickle=True)
-BigGraphs = np.load(file='/content/drive/My Drive/Code for MSci/realisations/100_paths_BigGraphs.npy', allow_pickle=True)
-BBigGraphs_1 = np.load(file='/content/drive/My Drive/Code for MSci/realisations/50_paths_BBigGraph_part1.npy', allow_pickle=True)
-BBigGraphs_2 = np.load(file='/content/drive/My Drive/Code for MSci/realisations/50_paths_BBigGraph_part2.npy', allow_pickle=True)
-BBBigGraphs_1 =  np.load(file='/content/drive/My Drive/Code for MSci/realisations/25_paths_1e5_part1.npy', allow_pickle=True)
-BBBigGraphs_2 =  np.load(file='/content/drive/My Drive/Code for MSci/realisations/25_paths_1e5_part2.npy', allow_pickle=True)
+SmallGraphs = np.load(file=<pathway to file>.npy, allow_pickle=True)
+BigGraphs = np.load(file=<pathway to file>.npy, allow_pickle=True)
+BBigGraphs_1 = np.load(file=<pathway to file>.npy, allow_pickle=True)
+BBigGraphs_2 = np.load(file=<pathway to file>.npy, allow_pickle=True)
+BBBigGraphs_1 =  np.load(file=<pathway to file>.npy, allow_pickle=True)
+BBBigGraphs_2 =  np.load(file=<pathway to file>.npy, allow_pickle=True)
 
 #SmallGraphs
 
