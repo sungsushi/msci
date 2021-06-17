@@ -10,6 +10,4 @@
 
 **Measures** folder contains the various 1+1D path measures used in the project: angles, area and protrusion from the ordered list of node coordinates consitituting the path through a network. 
 
-**Path Measures Analysis** code for the statistical analysis of path properties using the measures we developed.
-
-**Path Scaling Law Analysis** code for statistical analysis of path length scaling with number of nodes.
+**Analysis** contains the code that retrievs the .npy files from realisations, and then engages in the analysis. this is split into 2 scripts: **Path Measures Analysis** code for the statistical analysis of path properties using the measures we developed. And **Path Scaling Law Analysis** code for statistical analysis of path length scaling with number of nodes. These were originally Google Colab Notebooks that have been converted into .py files, and may contain artifacts from that conversion process.
