@@ -1,6 +1,6 @@
 # Msci Project
 
-## This project was investigated directed acyclic graphs embedded in Minkowski space, comparing various paths in graph to the geodesic of the space. The repository contains the code used for generating the model. 
+## This project was investigating directed acyclic graphs embedded in Minkowski space, comparing various paths in graph to the geodesic of the space. The repository contains the code used for generating the model. 
 
 **Realisations** has the basic version of the model and code for the HPC. It contains a low-ram method of obtaining longest, random and time greedy paths of a DAG. It also contains a .pbs jobscript. 
 
